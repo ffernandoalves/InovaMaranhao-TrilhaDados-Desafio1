@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Inter:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container__conteudo">
+            <div class="container__informacoes">
+                <!-- <div class="container__desafios"> -->
+                    <ol class="desafios">
+                        <li><button class="container__botao" role="button" onclick="carregarDesafio('desafios/desafio1.js')">Desafio 1</button></li>
+                        <li><button class="container__botao" role="button" onclick="carregarDesafio('desafios/desafio2.js')">Desafio 2</button></li>
+                        <li><button class="container__botao" role="button" onclick="carregarDesafio('desafios/desafio3.js')">Desafio 3</button></li>
+                        <li><button class="container__botao" role="button" onclick="carregarDesafio('desafios/desafio4.js')">Desafio 4</button></li>
+                        <li><button class="container__botao" role="button" onclick="carregarDesafio('desafios/desafio5.js')">Desafio 5</button></li>
+                        <li><button class="container__botao" role="button" onclick="carregarDesafio('desafios/desafio6.js')">Desafio 6</button></li>
+                        <li><button class="container__botao" role="button" onclick="carregarDesafio('desafios/desafio7.js')">Desafio 7</button></li>
+                        <li><button class="container__botao" role="button" onclick="carregarDesafio('desafios/desafio8.js')">Desafio 8</button></li>
+                        <li><button class="container__botao" role="button" onclick="carregarDesafio('desafios/desafio9.js')">Desafio 9</button></li>
+                        <li><button class="container__botao" role="button" onclick="carregarDesafio('desafios/desafio10.js')">Desafio 10</button></li>
+                    </ol>
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div id="questao-desafio"></div>
+    <script>
+        function carregarDesafio(camDesafio) {
+            document.getElementById("questao-desafio").innerHTML = "";
+            let script = document.createElement("script");
+            script.src = camDesafio;
+            document.getElementById("questao-desafio").appendChild(script);
+        }
+    </script>
+</body>
+
+</html>
